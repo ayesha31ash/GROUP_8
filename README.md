@@ -1,48 +1,65 @@
-\# GROUP 8: Multimodal Skin-Lesion Classification (Derm7pt)
+# GROUP 8: Multimodal Skin-Lesion Classification (Derm7pt)
 
 
 
-\## 1. Introduction \& Objectives
+ H00505014 	Anam Ayyub 
 
-\- Multiclass diagnosis + binary malignancy
+ H00498947  Ayesha Syed Mohammad
 
-\- Generative \& discriminative model components
+ H00519518	Nandini Petli
+
+ H00363811	Prianshu Rajput
+
+ H00521656  Yogesh Lachman Wadhwani
 
 
-
-\## 2. Data Overview
-
-\- Clinical + dermoscopic images, 34 sites
-
-\- Metadata: seven-point checklist + patient info
-
-\- Official train/val/test splits
+### Datasets can be found under the 'Dataset' folder in the repo
 
 
 
-\## 3. Baselines \& Metrics
 
-\- Image-only (CNN), metadata-only (LR, RF)
+## 1. Runnable Files for Results
 
-\- Metrics: Macro F1, ROC-AUC, sensitivity/specificity
+a.  [01_EDA.ipynb](notebooks/01_EDA.ipynb) for Initial clean up and exploration, cleaning and visualization
+
+b.  [02_Baselines.ipynb](notebooks/02_Baselines.ipynb) for traditional ML models with tuning and visualizations
+
+c.  [Image_Implementation.ipynb](notebooks/Image_Implementation.ipynb) for CNN + Fusion implementation
+
+Extras:
+
+a. Detailed decision trees process in [03_DecisionTree_Analysis.ipynb](notebooks/03_DecisionTree_Analysis.ipynb)
+
+b. [04_CNN_Sandbox_Images.ipynb](notebooks/04_CNN_Sandbox_Images.ipynb) and [05_Final_CNN_Model.ipynb](notebooks/05_Final_CNN_Model.ipynb) files try a variety of techniques to get more results
 
 
 
-\## 4. Fusion Architecture
 
-\- Dual-CNN + metadata-MLP → late fusion classifier
+## 2. Extra Information
 
-\- Imbalance handling: class weights / focal loss
+- Worthy correlations are outputted to output.txt for visualizing.
+- Cleaned DataFrame without 'diagnosis' column ready for classifying in sampling.csv file.
+- Metrics used for files: Macro F1, ROC-AUC, sensitivity/specificity.
 
+## 3. Required libraries
 
+- os
+- pandas
+- numpy
+- matplotlib.pyplot
+- seaborn
+- lightgbm
+- sklearn
+- imblearn
+- tensorflow
+- torch
+- torchvision
+- PIL
+- tqdm
+- warnings
 
-\## 5. Evaluation \& Next Steps
-
-\- Ablations: modality vs metadata vs fusion
-
-\- Explainability: Grad-CAM + SHAP
-
-\- Lab mapping: EDA → baselines → fusion
-
+##  Project Presentation
+**Skin_Lesion_Classification_FINAL_Presentation.pdf**  
+This file contains the final slides for the Derm7PT project.
 
 
